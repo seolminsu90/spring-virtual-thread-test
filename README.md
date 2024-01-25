@@ -61,6 +61,10 @@ curl -XGET localhost:8080/test/thread
 
 #### 결과 
 
-일반 쓰레드의 경우 일정량의 쓰레드 갯수 이후 Context switching 비용으로 인해 점점 느려지는 반면, 경량 쓰레드의 경우 1초로 잘 유지되고 있는 것을 확인할 수 있었다.   
+일반 쓰레드의 경우 일정량의 쓰레드 갯수 이후 Context switching 비용으로 인해 점점 느려지는 반면, 경량 쓰레드의 경우 1초로 잘 유지되고 있는 것을 확인할 수 있다.   
 물론 모든 환경에 경량 쓰레드가 잘 될지는 Production 환경에서 테스트해봐야 할 것 같지만 Reactive 기반의 코드 스타일로 전환하는 비용보다는 간단하게 성능적 이점을 챙길 수 있을 거라고 본다.   
 추후 하는 모든 Spring java 프로젝트는 JDK21 기반의 Virtual Thread 환경에서 진행해볼 예정이다. 
+
+[Reference][ref]
+
+[ref]: https://www.baeldung.com/spring-6-virtual-threads
